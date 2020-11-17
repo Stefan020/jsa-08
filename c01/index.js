@@ -49,4 +49,4 @@ const sampleFn = () =>{
     console.log('Funkcija 3!');
 }
 
-//What is the difference between arrow and clasic javascript functions
+//What is the difference between fat arrow and clasic javascript functions
