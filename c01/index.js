@@ -49,4 +49,10 @@ const sampleFn = () =>{
     console.log('Funkcija 3!');
 }
 
+const Dog = (type) => {
+    this.type = type;
+}
+const pitbull = new Dog('pitbull');
+console.log('pitbull');
+
 //What is the difference between fat arrow and clasic javascript functions
