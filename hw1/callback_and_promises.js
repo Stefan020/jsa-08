@@ -6,22 +6,22 @@ const result = (output) => {
     console.log(output);
 }
 
-const showWeight = (weight, conversWeight, output) => {
- 
+const showWeight = (weight, conversWeight,res) => {
+ let output = "";
     switch(conversWeight){
         case 'kg':
-            output = weight * 2.20462;
-            result(output);
+            output = weight * 2.20462;      
             break;
         case 'pound':
             output = weight / 2.20462;
-            result(output);
             break;
     }
+    res(output);
 }
 
 showWeight(52, 'kg', result);
 
+//
 
 const showHeight = (height, conversHeight, output) =>{
     switch(conversHeight){
@@ -48,15 +48,17 @@ const parniBroevi = (param1,param2) => {
             return fail('Vnesovte neparen broj!')
         }
     });
-}
+};
+
 parniBroevi(8,2)
 .then(i => {
     console.log(i);
 })
 .catch(err => {
     console.log(err);
-})
+});
 
+//
 
 const ednakviBroevi = (num1,num2) => {
     return new Promise((success,fail) => {
@@ -66,15 +68,17 @@ const ednakviBroevi = (num1,num2) => {
             fail('Vnesovte dva razlicni broja!');
         }
     });
-}
+};
+
 ednakviBroevi(3,3)
 .then(x => {
     console.log(x);
 })
 .catch(err => {
     console.log(err);
-})
+});
 
+//
 
 const trocifreniBroevi = (number1,number2) => {
     return new Promise((success,fail) => {
@@ -84,11 +88,12 @@ const trocifreniBroevi = (number1,number2) => {
             fail('Vnesete trocifren broj!');
         }
     });
-}
+};
+
 trocifreniBroevi(1000,234)
 .then(a => {
     console.log(a);
 })
 .catch(err => {
     console.log(err);
-})
+});

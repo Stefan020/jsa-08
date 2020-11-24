@@ -36,6 +36,7 @@ const showTemperature = (degrees, conversMethod,result) => {
    }
 }
 
+
 showTemperature(42, 'c2f', result);
 
 //mesto if else loop moze so switch case!
