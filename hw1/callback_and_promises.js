@@ -65,11 +65,29 @@ const ednakviBroevi = (num1,num2) => {
         }else{
             fail('Vnesovte dva razlicni broja!');
         }
-    })
+    });
 }
 ednakviBroevi(3,3)
 .then(x => {
     console.log(x);
+})
+.catch(err => {
+    console.log(err);
+})
+
+
+const trocifreniBroevi = (number1,number2) => {
+    return new Promise((success,fail) => {
+        if(number1 >= 100 && number2 >= 100){
+            return success(number1 * number2);
+        }else{
+            fail('Vnesete trocifren broj!');
+        }
+    });
+}
+trocifreniBroevi(1000,234)
+.then(a => {
+    console.log(a);
 })
 .catch(err => {
     console.log(err);
