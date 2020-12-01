@@ -53,12 +53,22 @@ api.put('/users/:id', (req, res) => {
    res.status(204).send(usersData);
 });
 
+
 api.patch('/users/:id', (req, res) => {
-    if(!usersData[req.params.id]){
-        return res.status(404).send("not found");
+    if (!usersData[req.params.id]) {
+        return res.status(404).send('Not Found');
     }
-    usersData[req.params.id] = req.body;
-    res.status(202).send(usersData);
+
+    if (req.body.first_name && req.body.last_name) {
+        return usersData[req.params.id] = req.body;
+    }
+    if (req.body.first_name) {
+        return usersData[req.params.id].first_name = req.body.first_name;
+    }
+    if (req.body.last_name) {
+        return usersData[req.params.id].last_name = req.body.last_name;
+    }
+    res.status(204).send(req.body);
 });
 
 api.delete('/users/:id', (req, res) => {
