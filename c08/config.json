@@ -1,0 +1,15 @@
+{
+    "db": {
+        "username": "stefan",
+        "password": "ngolokante7",
+        "host": "cluster0.omvde.mongodb.net",
+        "dbname": "students"
+    },
+    "server": {
+        "port":9001
+    },
+    "email":{
+        "api_key": "key",
+        "secret": "test..."
+    }
+}
